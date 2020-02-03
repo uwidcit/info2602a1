@@ -12,8 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
-    "live-server": "^1.2.1",
-    "mocha": "^7.0.1",
     "puppeteer": "^2.1.0"
   }
 }
