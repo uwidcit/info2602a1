@@ -1,0 +1,19 @@
+{
+  "name": "a1starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "live-server",
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "live-server": "^1.2.1",
+    "mocha": "^7.0.1",
+    "puppeteer": "^2.1.0"
+  }
+}
