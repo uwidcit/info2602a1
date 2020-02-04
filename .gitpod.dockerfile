@@ -2,7 +2,7 @@ FROM gitpod/workspace-full
 
 USER gitpod
 
-RUN npm i -g mocha && npm i -g live-server && npm install
+RUN npm i -g mocha && npm i -g live-server && npm i -g puppeteer && npm install
 
 USER root
 RUN sudo apt-get update
