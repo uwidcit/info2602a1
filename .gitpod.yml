@@ -1,7 +1,6 @@
 image:
   file: .gitpod.dockerfile
-tasks:
-  - init: npm i -g mocha puppeteer live-server && npm install
+
 # Ports to expose on workspace startup (optional)
 ports:
   - port: 8000
