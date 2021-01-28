@@ -23,5 +23,5 @@ RUN apt-get update \
 #     && mkdir -p /home/gitpod/Downloads \
 #     && chown -R gitpod:gitpod /home/gitpod \
 #     && chown -R gitpod:gitpod /node_modules
-
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 RUN npm i -g puppeteer mocha live-server
