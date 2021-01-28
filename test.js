@@ -17,7 +17,6 @@ before(async function(){
   page = await browser.newPage();
   await page.setRequestInterception(true);
   page.on('console', msg => console.log('PAGE LOG:', msg.text()));
-
   page.on('request', request => {
     requests.push(request.url());
     request.continue();

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "live-server",
+    "start": "live-server --host=0.0.0.0 --port=8080 --no-browser",
     "test": "mocha"
   },
   "keywords": [],
@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
-    "puppeteer": "^2.1.0",
-     "minimist": ">=0.2.1"
+    "minimist": ">=1.2.5",
+    "puppeteer": "^5.5.0"
   }
 }
