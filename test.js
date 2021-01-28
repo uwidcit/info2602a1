@@ -13,7 +13,7 @@ let requests = [];
 
 before(async function(){
   this.timeout(TIMEOUT);
-  browser = await puppeteer.launch({headless: HEADLESS,  defaultViewport: null, args: ['--no-sandbox', '--disable-setuid-sandbox']});
+  browser = await puppeteer.launch({ executablePath: 'google-chrome-stable', headless: HEADLESS,  defaultViewport: null, args: ['--no-sandbox', '--disable-setuid-sandbox']});
   page = await browser.newPage();
   await page.setRequestInterception(true);
   page.on('console', msg => console.log('PAGE LOG:', msg.text()));

@@ -4,12 +4,12 @@ image:
 tasks:
   - init: npm install
     command: npm start && gp await-port 8080 && gp preview $(gp url 8080)
-  - init: npm test
+  - init: echo run 'npm test' here
 
 # Ports to expose on workspace startup (optional)
-# ports:
-#   - port: 8080
-#     onOpen: open-preview
+ports:
+  - port: 8080
+    onOpen: open-preview
 
 github:
   prebuilds:
