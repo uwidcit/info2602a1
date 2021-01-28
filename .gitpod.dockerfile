@@ -17,11 +17,11 @@ RUN apt-get update \
 # RUN chmod +x /usr/local/bin/dumb-init
 # ENTRYPOINT ["dumb-init", "--"]
 
-RUN npm i puppeteer \
-    # Add user so we don't need --no-sandbox.
-    # same layer as npm install to keep re-chowned files from using up several hundred MBs more space
-    && mkdir -p /home/gitpod/Downloads \
-    && chown -R gitpod:gitpod /home/gitpod \
-    && chown -R gitpod:gitpod /node_modules
+# RUN npm i puppeteer \
+#     # Add user so we don't need --no-sandbox.
+#     # same layer as npm install to keep re-chowned files from using up several hundred MBs more space
+#     && mkdir -p /home/gitpod/Downloads \
+#     && chown -R gitpod:gitpod /home/gitpod \
+#     && chown -R gitpod:gitpod /node_modules
 
-RUN npm i -g  mocha live-server
+RUN npm i -g puppeteer mocha live-server
