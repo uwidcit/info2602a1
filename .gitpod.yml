@@ -1,15 +1,19 @@
 image:
-  file: .gitpod.dockerfile
-  
-tasks:
-  - init: npm install
-    command: npm start && gp await-port 8080 && gp preview $(gp url 8080)
-  - init: echo run 'npm test' here
-
-# Ports to expose on workspace startup (optional)
+  file: Dockerfile
+checkoutLocation: chromium/src/
 ports:
-  - port: 8080
-    onOpen: open-preview
+- port: 6080
+  onOpen: open-preview
+tasks:
+- init: >
+    cd /workspace/chromium &&
+    pyenv local system &&
+    wget https://raw.githubusercontent.com/gitpod-io/definitely-gp/master/chromium/.gclient &&
+    cd src &&
+    gclient sync &&
+    gn gen out/Default --args="enable_nacl=false"
+  command: npm install && npm start
+
 
 github:
   prebuilds:
