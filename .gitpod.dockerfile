@@ -20,7 +20,6 @@ RUN apt-get update \
 RUN npm i puppeteer \
     # Add user so we don't need --no-sandbox.
     # same layer as npm install to keep re-chowned files from using up several hundred MBs more space
-    && groupadd -r gitpod && useradd -r -g gitpod -G audio,video gitpod \
     && mkdir -p /home/gitpod/Downloads \
     && chown -R gitpod:gitpod /home/gitpod \
     && chown -R gitpod:gitpod /node_modules
