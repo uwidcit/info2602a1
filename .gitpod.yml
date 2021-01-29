@@ -1,14 +1,14 @@
 image:
   file: .gitpod.Dockerfile
-ports:
-  - port: 6080
-    onOpen: open-preview
-  - port: 5900
-    onOpen: ignore
-  - port: 35900
-    onOpen: ignore
+  
 tasks:
-  - command: chromium-browser --no-sandbox
+  - init: npm install
+    command: npm start
+
+# Ports to expose on workspace startup (optional)
+ports:
+  - port: 8080
+    onOpen: open-preview
 
 # github:
 #   prebuilds:
