@@ -1,18 +1,14 @@
 image:
   file: .gitpod.Dockerfile
-
-tasks:
-  - init: |
-      touch /tmp/.npm-lock
-      npm install
-      rm /tmp/.npm-lock
 ports:
+  - port: 6080
+    onOpen: open-preview
   - port: 5900
     onOpen: ignore
-  - port: 6080
-    onOpen: open-browser
-  - port: 10000
+  - port: 35900
     onOpen: ignore
+tasks:
+  - command: chromium-browser --no-sandbox
 
 # github:
 #   prebuilds:
