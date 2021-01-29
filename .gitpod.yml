@@ -1,5 +1,5 @@
 image:
-  file: .gitpod.dockerfile
+  file: .gitpod.Dockerfile
 ports:
   - port: 6080
     onOpen: open-preview
@@ -9,8 +9,6 @@ ports:
     onOpen: ignore
 tasks:
   - command: chromium-browser --no-sandbox
-
-
 
 # github:
 #   prebuilds:
