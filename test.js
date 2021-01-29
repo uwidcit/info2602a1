@@ -4,7 +4,7 @@ const { expect, assert }  = require('chai');
 
 let URL ="http://127.0.0.1:8080/index.html";
 
-const HEADLESS = true;
+const HEADLESS = false;
 const TIMEOUT = 12000;
 
 let browser;
@@ -13,7 +13,7 @@ let requests = [];
 
 before(async function(){
   this.timeout(TIMEOUT);
-  browser = await puppeteer.launch({ executablePath: 'google-chrome-stable', headless: HEADLESS,  defaultViewport: null, args: ['--no-sandbox', '--disable-setuid-sandbox']});
+  browser = await puppeteer.launch({ headless: HEADLESS,  defaultViewport: null, args: ['--no-sandbox', '--disable-setuid-sandbox']});
   page = await browser.newPage();
   await page.setRequestInterception(true);
   page.on('console', msg => console.log('PAGE LOG:', msg.text()));
