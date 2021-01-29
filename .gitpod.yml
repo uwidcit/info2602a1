@@ -1,18 +1,15 @@
 image:
-  file: Dockerfile
-checkoutLocation: chromium/src/
+  file: .gitpod.Dockerfile
 ports:
-- port: 6080
-  onOpen: open-preview
+  - port: 6080
+    onOpen: open-preview
+  - port: 5900
+    onOpen: ignore
+  - port: 35900
+    onOpen: ignore
 tasks:
-- init: >
-    cd /workspace/chromium &&
-    pyenv local system &&
-    wget https://raw.githubusercontent.com/gitpod-io/definitely-gp/master/chromium/.gclient &&
-    cd src &&
-    gclient sync &&
-    gn gen out/Default --args="enable_nacl=false"
-  command: npm install && npm start
+  - init: npm install
+  - command: chromium-browser --no-sandbox
 
 
 github:
