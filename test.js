@@ -21,7 +21,7 @@ before(async function(){
     requests.push(request.url());
     request.continue();
   });
-  await page.emulateMedia("screen");
+//   await page.emulateMedia("screen");
   await page.goto(URL, { waitUntil: 'networkidle2'});
 });
 
