@@ -67,7 +67,7 @@ describe('Assignment 1', () => {
         expect(pageTitle).to.eql('Poke Dextr');
     });
 
-    it('Test 2: Should have a nav bar with containing the text "Poke Dextr"', async ()=>{
+    it('Test 2: Should have a nav bar containing the text "Poke Dextr"', async ()=>{
         let navhtml = await getHTML('nav');
         let result = navhtml === null ? -1 : navhtml.search('Poke Dextr');
         expect(result).to.not.eql(-1);
@@ -83,7 +83,7 @@ describe('Assignment 1', () => {
       expect(linkHandle).to.be.ok;
     });
 
-    it('Test 5: Should make an ajax call which requests pokemon data on load', async ()=>{
+    it('Test 5: Should make an HTTP request for a collection of pokemon data', async ()=>{
       let url = 'https://pokeapi.co/api/v2/pokemon/?limit=50&offset=50';
       let match = requests.includes(url); 
       expect(match).to.equal(true);
@@ -111,7 +111,7 @@ describe('Assignment 1', () => {
       expect(dugtrioLink).to.equal('dugtrio');
     });
 
-    it('Test 10: Should send an ajax request for pokemon details on link click', async ()=>{
+    it("Test 10: Should send an http request for a pokemon's details on link click", async ()=>{
       let reqs = ['https://pokeapi.co/api/v2/pokemon/dugtrio', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png'];
       let count = 0;
         
