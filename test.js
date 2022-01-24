@@ -106,9 +106,10 @@ describe('Assignment 1', () => {
 
     it('Test 9: Should show a #dugtrio link when the page is loaded', async () => {
       
-      const dugtrioLink = await (await (await page.$('#dugtrio')).getProperty('textContent')).jsonValue();
+      let linkValue = await (await (await page.$('#dugtrio')).getProperty('textContent')).jsonValue();
+      linkValue = linkValue.replaceAll('\n', '').replaceAll('\n', '').trim().toLowerCase();
 
-      expect(dugtrioLink).to.equal('dugtrio');
+      expect(linkValue).to.equal('dugtrio');
     });
 
     it("Test 10: Should send an http request for a pokemon's details on link click", async ()=>{
