@@ -23,7 +23,7 @@
   "homepage": "https://github.com/uwidcit/info2602a2#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.1",
+    "mocha": "^10.2.0",
     "puppeteer": "^2.1.1"
   }
 }
