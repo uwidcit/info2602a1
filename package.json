@@ -1,18 +1,29 @@
 {
-  "name": "a1starter",
+  "name": "info2602a2",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/uwidcit/info2602a2)",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --host=0.0.0.0 --port=8080 --no-browser",
-    "test": "mocha"
+    "init": "python ./App/initDB.py",
+    "start" :"python ./App/main.py",
+    "app-test": "mocha tests/test.js && mocha tests/test.js >> reports/app-report.txt; return 0",
+    "api-test": "npm run newman && npm run newman >> reports/api-report.txt",
+    "newman": "newman run tests/a2collection.json -e environment.json; return 0;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uwidcit/info2602a2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uwidcit/info2602a2/issues"
+  },
+  "homepage": "https://github.com/uwidcit/info2602a2#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "minimist": ">=1.2.5",
-    "puppeteer": "^5.5.0"
+    "mocha": "^7.1.1",
+    "puppeteer": "^2.1.1"
   }
 }

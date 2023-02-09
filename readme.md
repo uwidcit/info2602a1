@@ -1,16 +1,43 @@
-## INFO 2602 Assignment 1
-# Version 1.1
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/uwidcit/info2602a2) 
 
-# Change Log
-## Version 1.1 24/01/2022
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/583570/SzRuZCp8?version=latest)
 
-* Updated test case 9 to allow link text to be insensitive to case and whitespace
+# Running
+When opened in gitpod the server should be running already if it isn't
+you can start it with the following command;
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/uwidcit/info2602a1)
+```bash
+npm run start
+```
 
-## Description
+# Testing
+1. Update environment.json with your server's url
 
-In this assignment, you will be tasked in creating a simple front end javascript application which requests data from the pokedata API and renders its results to the page. The purpose of this assignment is to assess the student’s abilities with HTML, CSS and JS as well as apply Ajax and client-side templating methods covered in labs 1 and 2.
+```json
+{
+	"id": "af99e18d-e0b6-47aa-b586-2cec222c581a",
+	"name": "A2 Gitpod",
+	"values": [
+		{
+			"key": "host",
+			"value": "[your server url]",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-02-25T23:09:00.839Z",
+	"_postman_exported_using": "Postman/8.0.6"
+}
+```
 
-More Details on assignment spec document.
+2. Execute the following command to test Pokelisting page
 
+```
+npm run app-test
+```
+
+3. Execute the following comand to test the api
+
+```
+npm run api-test
+```
