@@ -1,7 +1,7 @@
 import click
 import csv
 from tabulate import tabulate
-from models import db, User, Pokemon, UserPokemon
+from App import db, User, Pokemon, UserPokemon
 from App import app
 
 @app.cli.command("init", help="Creates and initializes the database")

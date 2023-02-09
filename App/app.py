@@ -3,7 +3,7 @@ from datetime import timedelta
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_jwt_extended import create_access_token, jwt_required, JWTManager, get_jwt_identity
-from models import db, User, UserPokemon, Pokemon
+from .models import db, User, UserPokemon, Pokemon
 
 
 def create_app():
@@ -27,7 +27,7 @@ jwt = JWTManager(app)  #setup flask jwt-e to work with app
 
 @app.route('/')
 def index():
-  return '<h1>Todo API</h1>'
+  return '<h1>Poke API</h1>'
 
 
 if __name__ == "__main__":
