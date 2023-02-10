@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "api-test": "npm run newman && npm run newman >> reports/api-report.txt",
-    "newman": "newman run tests/collection.json -e environment.json; return 0;"
+    "newman": "newman run collection.json -e environment.json; return 0;"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uwidcit/info2602a2.git"
+    "url": "git+https://github.com/uwidcit/info2602a1.git"
   },
   "keywords": [],
   "author": "",

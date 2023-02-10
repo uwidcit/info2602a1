@@ -4,9 +4,12 @@ db = SQLAlchemy()
 
 class UserPokemon(db.Model):
   id = db.Column(db.Integer, primary_key=True)
+  pass
 
 class User(db.Model):
   id = db.Column(db.Integer, primary_key=True)
+  pass
 
 class Pokemon(db.Model):
-  pid = db.Column(db.Integer, primary_key=True)
+  id = db.Column(db.Integer, primary_key=True)
+  pass
