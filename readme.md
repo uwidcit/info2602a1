@@ -2,6 +2,15 @@
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/583570/SzRuZCp8?version=latest)
 
+
+# Initializing
+You can initialize your database according to the init command in wsgi.py by running the following command
+
+```
+flask init
+```
+It is a good idea to run this after every change to models
+
 # Running
 When opened in gitpod the server should be running already if it isn't
 you can start it with the following command;
@@ -11,26 +20,17 @@ flask run
 ```
 
 # Testing
-1. Update environment.json with your server's url
+1. Ensure postman is setup to point to your assignment's gitpod url as the host variable.
+2. Test your application by running the requests of the postman collection linked above and viewing the Test Results tab
 
-```json
-{
-	"id": "af99e18d-e0b6-47aa-b586-2cec222c581a",
-	"name": "A1 Gitpod",
-	"values": [
-		{
-			"key": "host",
-			"value": "[your server url]",
-			"enabled": true
-		}
-	],
-	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2021-02-25T23:09:00.839Z",
-	"_postman_exported_using": "Postman/8.0.6"
-}
-```
+![results](/img/results.png)
 
-```
-npm run api-test
-```
-2. Alternatively you can run the collection in postman
+When all of you routes are implemented you can run the entire collection of tests.
+
+![run 1](/img/run.png)
+
+![run 2](/img/run2.png)
+
+![run 3](/img/run3.png)
+
+You should pay particular attention to the example requests and responses and the test results to ensure your application is meeting the required specification.
