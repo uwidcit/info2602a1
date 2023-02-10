@@ -33,3 +33,4 @@ flask run
 ```
 npm run api-test
 ```
+2. Alternatively you can run the collection in postman
