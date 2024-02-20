@@ -1,4 +1,4 @@
-import os
+import os, csv
 from flask import Flask, jsonify, request
 from functools import wraps
 from flask_cors import CORS
@@ -21,10 +21,12 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'MySecretKey'
 app.config['JWT_ACCESS_COOKIE_NAME'] = 'access_token'
 app.config['JWT_REFRESH_COOKIE_NAME'] = 'refresh_token'
-app.config["JWT_TOKEN_LOCATION"] = ["cookies"]
+app.config["JWT_TOKEN_LOCATION"] = ["cookies", "headers"]
 app.config["JWT_COOKIE_SECURE"] = True
 app.config["JWT_SECRET_KEY"] = "super-secret"
 app.config["JWT_COOKIE_CSRF_PROTECT"] = False
+app.config['JWT_HEADER_TYPE'] = ""
+app.config['JWT_HEADER_NAME'] = "Cookie"
 
 
 # Initialize App 
@@ -33,14 +35,15 @@ app.app_context().push()
 CORS(app)
 jwt = JWTManager(app)
 
-# Initiailzer Function to be used in both init command and /init route
+# Initializer Function to be used in both init command and /init route
 def initialize_db():
   pass
 
 # ********** Routes **************
 @app.route('/')
 def index():
-  return '<h1>Poke API</h1>'
+  return '<h1>Poke API v1.0</h1>'
 
 if __name__ == "__main__":
-  app.run(host='0.0.0.0', debug=True)
+  app.run(host='0.0.0.0', port=81)
+

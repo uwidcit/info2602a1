@@ -1,10 +1,10 @@
 {
 	"id": "af99e18d-e0b6-47aa-b586-2cec222c581a",
-	"name": "A1 Gitpod",
+	"name": "Localhost",
 	"values": [
 		{
 			"key": "host",
-			"value": "http://localhost:8080",
+			"value": "http://0.0.0.0:8080",
 			"enabled": true
 		}
 	],
