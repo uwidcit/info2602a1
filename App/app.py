@@ -33,6 +33,10 @@ app.app_context().push()
 CORS(app)
 jwt = JWTManager(app)
 
+# Initiailzer Function to be used in both init command and /init route
+def initialize_db():
+  pass
+
 # ********** Routes **************
 @app.route('/')
 def index():
