@@ -16,7 +16,7 @@ from .models import db, User, UserPokemon, Pokemon
 
 # Configure Flask App
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(app.root_path, 'data.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'MySecretKey'
 app.config['JWT_ACCESS_COOKIE_NAME'] = 'access_token'
@@ -37,7 +37,8 @@ jwt = JWTManager(app)
 
 # Initializer Function to be used in both init command and /init route
 def initialize_db():
-  pass
+  db.drop_all()
+  db.create_all()
 
 # ********** Routes **************
 @app.route('/')

@@ -6,5 +6,6 @@ from App import app, initialize_db
 
 @app.cli.command("init", help="Creates and initializes the database")
 def initialize():
-  print(initialize_db())
+  initialize_db()
+  print("Database Initialized!")
   
