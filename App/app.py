@@ -43,8 +43,11 @@ def initialize_db():
   with open('pokemon.csv') as file:
     reader = csv.DictReader(file)
     for row in reader:
-      new_pokemon = Pokemon(text=row['text'])
+      new_pokemon = Pokemon(name=row['name'], attack=row['attack'], defense=row['defense'], hp=row['hp'], defense2=row['defense2'], height=row['height'], sp_attack=row['sp_attack'], sp_defense=row['sp_defense'], speed=row['speed'], type1=row['type1'], type2=row['type2'])
+      db.session.add(new_pokemon)
+    db.session.commit()
 
+    
 # ********** Routes **************
 @app.route('/')
 def index():
