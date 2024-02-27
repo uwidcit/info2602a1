@@ -39,6 +39,11 @@ jwt = JWTManager(app)
 def initialize_db():
   db.drop_all()
   db.create_all()
+  # Objective (2) Initialize the Database
+  with open('pokemon.csv') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+      new_pokemon = Pokemon(text=row['text'])
 
 # ********** Routes **************
 @app.route('/')
