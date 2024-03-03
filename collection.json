@@ -52,52 +52,24 @@
 					"_postman_previewlanguage": "html",
 					"header": [
 						{
-							"key": "Date",
-							"value": "Sat, 11 Feb 2023 01:02:05 GMT"
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22"
 						},
 						{
 							"key": "Content-Type",
 							"value": "text/html; charset=utf-8"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "CF-Ray",
-							"value": "797927cbed71335b-MIA"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "CF-Cache-Status",
-							"value": "DYNAMIC"
-						},
-						{
-							"key": "x-render-origin-server",
-							"value": "gunicorn"
+							"key": "Date",
+							"value": "Sun, 03 Mar 2024 00:31:41 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "cloudflare"
-						},
-						{
-							"key": "Content-Encoding",
-							"value": "br"
-						},
-						{
-							"key": "alt-svc",
-							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
@@ -185,7 +157,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 20 Feb 2024 04:01:07 GMT"
+							"value": "Sun, 03 Mar 2024 00:32:55 GMT"
 						},
 						{
 							"key": "Server",
@@ -290,11 +262,11 @@
 						},
 						{
 							"key": "Date",
-							"value": "Thu, 09 Feb 2023 15:05:21 GMT"
+							"value": "Sun, 03 Mar 2024 00:33:13 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.8.16"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
@@ -309,11 +281,11 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"let { username, password } = JSON.parse(pm.request.body.raw);",
-							"",
-							"pm.collectionVariables.set('credentials', JSON.stringify({username, password}));",
+							"let { username, password, email } = JSON.parse(pm.request.body.raw);",
 							"",
 							"pm.collectionVariables.set('username', username);",
+							"pm.collectionVariables.set('password', password);",
+							"pm.collectionVariables.set('email', email);",
 							"",
 							"pm.test(",
 							"\t\"Should respond with <username> created message\", ",
@@ -414,64 +386,38 @@
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
-							"key": "Date",
-							"value": "Fri, 10 Feb 2023 17:02:12 GMT"
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
 						},
 						{
 							"key": "Content-Type",
 							"value": "application/json"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "CF-Ray",
-							"value": "7976693bbe4d3ad6-IAD"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "CF-Cache-Status",
-							"value": "DYNAMIC"
-						},
-						{
-							"key": "x-render-origin-server",
-							"value": "gunicorn"
+							"key": "Date",
+							"value": "Sun, 03 Mar 2024 00:33:57 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "cloudflare"
-						},
-						{
-							"key": "alt-svc",
-							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"message\": \"Franz.Harber created\"\n}"
+					"body": "{\n    \"message\": \"Jennings.Goodwin created\"\n}"
 				}
 			]
 		},
 		{
-			"name": "Sign Up - Bad Username",
+			"name": "Sign Up - Fail",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
-							"let { username, password } = JSON.parse(pm.request.body.raw);",
-							"",
 							"pm.test(",
 							"\t\"Should respond with 'username or email already exists'\", ",
 							"\tfunction () {",
@@ -536,7 +482,7 @@
 			},
 			"response": [
 				{
-					"name": "Sign Up - Fail",
+					"name": "Sign Up - Bad Username",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -571,48 +517,24 @@
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
-							"key": "Date",
-							"value": "Fri, 10 Feb 2023 13:43:55 GMT"
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
 						},
 						{
 							"key": "Content-Type",
 							"value": "application/json"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "CF-Ray",
-							"value": "797546c9cb2c32f2-JAX"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "CF-Cache-Status",
-							"value": "DYNAMIC"
-						},
-						{
-							"key": "x-render-origin-server",
-							"value": "gunicorn"
+							"key": "Date",
+							"value": "Sat, 02 Mar 2024 23:30:08 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "cloudflare"
-						},
-						{
-							"key": "alt-svc",
-							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
@@ -621,7 +543,7 @@
 			]
 		},
 		{
-			"name": "Login - Bad ID",
+			"name": "Login - Bad Credentials",
 			"event": [
 				{
 					"listen": "test",
@@ -690,7 +612,7 @@
 			},
 			"response": [
 				{
-					"name": "Login - Success",
+					"name": "Login - Bad Credentials",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
@@ -703,7 +625,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{{credentials}}",
+							"raw": "{\r\n\t\"username\" :\"rocky3223\",\r\n\t\"password\": \"lol\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -720,61 +642,33 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
+					"status": "Unauthorized",
+					"code": 401,
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
-							"key": "Date",
-							"value": "Fri, 10 Feb 2023 13:47:09 GMT"
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
 						},
 						{
 							"key": "Content-Type",
 							"value": "application/json"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "CF-Ray",
-							"value": "79754b83fcb432f2-JAX"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "CF-Cache-Status",
-							"value": "DYNAMIC"
-						},
-						{
-							"key": "x-render-origin-server",
-							"value": "gunicorn"
+							"key": "Date",
+							"value": "Sun, 03 Mar 2024 00:39:14 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "cloudflare"
-						},
-						{
-							"key": "Content-Encoding",
-							"value": "br"
-						},
-						{
-							"key": "alt-svc",
-							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NjAzNjgyOSwianRpIjoiODllNmEyMzgtMDA0MS00YTc5LTljNGItMmFjOTc4YjBmMTk0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IlJlbmUuU3RhbW0iLCJuYmYiOjE2NzYwMzY4MjksImV4cCI6MTY3NjA4MDAyOX0.QXH9UqKotSf9w0e7rZiX0ml8ZdEMY3lNHcc6rdqMKl4\"\n}"
+					"body": "{\n    \"error\": \"bad username/password given\"\n}"
 				}
 			]
 		},
@@ -785,11 +679,9 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"",
-							"",
 							"pm.test(\"Returned Access Token\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.environment.set('access_token', jsonData['access_token']) ",
+							"    pm.collectionVariables.set('access_token', jsonData['access_token']) ",
 							"});",
 							"",
 							"",
@@ -823,7 +715,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{{credentials}}",
+					"raw": "{\r\n\t\"username\": \"{{username}}\",\r\n\t\"password\": \"{{password}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -856,7 +748,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{{credentials}}",
+							"raw": "{\r\n\t\"username\": \"{{username}}\",\r\n\t\"password\": \"{{password}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -878,56 +770,28 @@
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
-							"key": "Date",
-							"value": "Fri, 10 Feb 2023 13:47:09 GMT"
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "309"
 						},
 						{
 							"key": "Content-Type",
 							"value": "application/json"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "CF-Ray",
-							"value": "79754b83fcb432f2-JAX"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "CF-Cache-Status",
-							"value": "DYNAMIC"
-						},
-						{
-							"key": "x-render-origin-server",
-							"value": "gunicorn"
+							"key": "Date",
+							"value": "Sun, 03 Mar 2024 00:39:18 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "cloudflare"
-						},
-						{
-							"key": "Content-Encoding",
-							"value": "br"
-						},
-						{
-							"key": "alt-svc",
-							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NjAzNjgyOSwianRpIjoiODllNmEyMzgtMDA0MS00YTc5LTljNGItMmFjOTc4YjBmMTk0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IlJlbmUuU3RhbW0iLCJuYmYiOjE2NzYwMzY4MjksImV4cCI6MTY3NjA4MDAyOX0.QXH9UqKotSf9w0e7rZiX0ml8ZdEMY3lNHcc6rdqMKl4\"\n}"
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwOTQyNjM1OCwianRpIjoiYzE4ODBjNjEtYjg4Ny00Mzk3LWE4YTQtNzk5M2U1MjU4MjdmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ikplbm5pbmdzLkdvb2R3aW4iLCJuYmYiOjE3MDk0MjYzNTgsImV4cCI6MTcwOTQ4MDM1OH0.I7MDJf8BRwuvzCX0O8rDEocJXsv7yHx3E8BNwUw8PYw\"\n}"
 				}
 			]
 		},
@@ -938,7 +802,7 @@
 					"listen": "prerequest",
 					"script": {
 						"exec": [
-							"pm.collectionVariables.set(\"random_num\", _.random(1, 100))"
+							"pm.collectionVariables.set(\"random_num\", _.random(1, 100));"
 						],
 						"type": "text/javascript"
 					}
@@ -947,17 +811,15 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"const host = pm.environment.get(\"host\");",
-							"const token = pm.environment.get(\"access_token\");",
-							"",
 							"pm.test(\"Content-Type header is application/json\", () => {",
 							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
 							"});",
 							"",
 							"if(pm.response.headers.get('Content-Type') == 'application/json'){",
 							"",
-							"\tconst {message} = pm.response.json();",
-							"\tconst { name } = JSON.parse(pm.request.body.raw);",
+							"\tconst { message } = pm.response.json();",
+							"\tconst { name, pokemon_id } = JSON.parse(pm.request.body.raw);",
+							"",
 							"",
 							"\tpm.test(\"Should save a new MyPokemon object and return the name and id in a message\", function () {",
 							"\t\t\tlet [prefix, id] = message.split(' id: ');",
@@ -1043,6 +905,11 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "access_token={{access_token}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -1074,7 +941,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "45"
+							"value": "48"
 						},
 						{
 							"key": "Content-Type",
@@ -1082,15 +949,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Fri, 10 Feb 2023 14:14:16 GMT"
+							"value": "Sun, 03 Mar 2024 00:39:25 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.8.16"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"message\": \"Josue captured with id: 1\"\n}"
+					"body": "{\n    \"message\": \"Reinhold captured with id: 1\"\n}"
 				}
 			]
 		},
@@ -1101,7 +968,7 @@
 					"listen": "prerequest",
 					"script": {
 						"exec": [
-							"pm.environment.set(\"random_num\", _.random(1, 100))"
+							"pm.collectionVariables.set(\"bad_id\", _.random(10000, 19999));"
 						],
 						"type": "text/javascript"
 					}
@@ -1110,20 +977,18 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"const host = pm.environment.get(\"host\");",
-							"const token = pm.environment.get(\"access_token\");",
-							"",
 							"pm.test(\"Content-Type header is application/json\", () => {",
 							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
 							"});",
 							"",
+							"const { pokemon_id } = JSON.parse(pm.request.body.raw);",
+							"",
 							"if(pm.response.headers.get('Content-Type') == 'application/json'){",
 							"",
 							"\tconst {error} = pm.response.json();",
-							"\tconst { name } = JSON.parse(pm.request.body.raw);",
 							"",
-							"\tpm.test(\"Should return '10001 is not a valid pokemon id'\", function () {",
-							"\t\t\tpm.expect(error).to.eql('10001 is not a valid pokemon id');",
+							"\tpm.test(`Should return '${pokemon_id} is not a valid pokemon id'`, function () {",
+							"\t\t\tpm.expect(error).to.eql(`${pokemon_id} is not a valid pokemon id`);",
 							"\t\t}",
 							"\t);",
 							"",
@@ -1169,7 +1034,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"pokemon_id\":10001,\n\t\"name\": \"{{$randomFirstName}}\"\n}",
+					"raw": "{\n\t\"pokemon_id\":{{bad_id}},\n\t\"name\": \"{{$randomFirstName}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1202,7 +1067,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"pokemon_id\":10001,\n\t\"name\": \"{{$randomFirstName}}\"\n}",
+							"raw": "{\n\t\"pokemon_id\":{{bad_id}},\n\t\"name\": \"{{$randomFirstName}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1237,15 +1102,15 @@
 						},
 						{
 							"key": "Date",
-							"value": "Fri, 10 Feb 2023 14:06:09 GMT"
+							"value": "Sun, 03 Mar 2024 00:39:33 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "Werkzeug/2.2.2 Python/3.8.16"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"error\": \"10001 is not a valid pokemon id\"\n}"
+					"body": "{\n    \"error\": \"17539 is not a valid pokemon id\"\n}"
 				}
 			]
 		},
@@ -1332,56 +1197,28 @@
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
-							"key": "Date",
-							"value": "Fri, 10 Feb 2023 13:55:56 GMT"
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
 						},
 						{
 							"key": "Content-Type",
 							"value": "application/json"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "CF-Ray",
-							"value": "79755865de1332f2-JAX"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "CF-Cache-Status",
-							"value": "DYNAMIC"
-						},
-						{
-							"key": "x-render-origin-server",
-							"value": "gunicorn"
+							"key": "Date",
+							"value": "Sun, 03 Mar 2024 00:39:54 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "cloudflare"
-						},
-						{
-							"key": "Content-Encoding",
-							"value": "br"
-						},
-						{
-							"key": "alt-svc",
-							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
-					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Bernardo\",\n        \"species\": \"Mankey\"\n    }\n]"
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Reinhold\",\n        \"species\": \"Weedle\"\n    }\n]"
 				}
 			]
 		},
@@ -1476,56 +1313,28 @@
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
-							"key": "Date",
-							"value": "Fri, 10 Feb 2023 13:56:12 GMT"
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
 						},
 						{
 							"key": "Content-Type",
 							"value": "application/json"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "CF-Ray",
-							"value": "797558c61e5332f2-JAX"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "CF-Cache-Status",
-							"value": "DYNAMIC"
-						},
-						{
-							"key": "x-render-origin-server",
-							"value": "gunicorn"
+							"key": "Date",
+							"value": "Sun, 03 Mar 2024 00:40:05 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "cloudflare"
-						},
-						{
-							"key": "Content-Encoding",
-							"value": "br"
-						},
-						{
-							"key": "alt-svc",
-							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"id\": 1,\n    \"name\": \"Bernardo\",\n    \"species\": \"Mankey\"\n}"
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Reinhold\",\n    \"species\": \"Weedle\"\n}"
 				}
 			]
 		},
@@ -1538,10 +1347,12 @@
 						"exec": [
 							"",
 							"let username = pm.collectionVariables.get('username');",
+							"let bad_id = pm.collectionVariables.get('bad_id');",
 							"",
-							"pm.test(`Should return 'Id 99 is invalid or does not belong to ${username}'`, function () {",
+							"",
+							"pm.test(`Error`, function () {",
 							"    var {error} = pm.response.json();",
-							"\tpm.expect(error).to.eql(`Id 99 is invalid or does not belong to ${username}`);",
+							"\tpm.expect(error).to.contain(`Id ${bad_id} is invalid or does not belong to ${username}`);",
 							"});",
 							"",
 							"",
@@ -1560,7 +1371,7 @@
 					"listen": "prerequest",
 					"script": {
 						"exec": [
-							""
+							"pm.collectionVariables.set(\"bad_id\", _.random(100000, 199999));"
 						],
 						"type": "text/javascript"
 					}
@@ -1585,13 +1396,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/mypokemon/99",
+					"raw": "{{host}}/mypokemon/{{bad_id}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
 						"mypokemon",
-						"99"
+						"{{bad_id}}"
 					]
 				},
 				"description": "Returns an appropriate error and status when the UserPokemon.id given does not belong to the user or is invalid."
@@ -1603,13 +1414,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/mypokemon/99",
+							"raw": "{{host}}/mypokemon/{{bad_id}}",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"mypokemon",
-								"99"
+								"{{bad_id}}"
 							]
 						}
 					},
@@ -1623,7 +1434,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "65"
+							"value": "75"
 						},
 						{
 							"key": "Content-Type",
@@ -1631,7 +1442,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Sat, 17 Feb 2024 03:58:29 GMT"
+							"value": "Sat, 02 Mar 2024 21:22:40 GMT"
 						},
 						{
 							"key": "Server",
@@ -1639,7 +1450,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"error\": \"Id 99 is invalid or does not belong to Bailee33\"\n}"
+					"body": "{\n    \"error\": \"Id 164043 is invalid or does not belong to Isaias_Corwin8\"\n}"
 				}
 			]
 		},
@@ -1659,7 +1470,7 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"const token = pm.environment.get(\"access_token\");",
+							"const token = pm.collectionVariables.get(\"access_token\");",
 							"",
 							"let { name } = JSON.parse(pm.request.body);",
 							"pm.collectionVariables.set('name', name);",
@@ -1780,56 +1591,28 @@
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
-							"key": "Date",
-							"value": "Fri, 10 Feb 2023 13:57:13 GMT"
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
 						},
 						{
 							"key": "Content-Type",
 							"value": "application/json"
 						},
 						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "CF-Ray",
-							"value": "79755a45dd7232f2-JAX"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept-Encoding"
-						},
-						{
-							"key": "CF-Cache-Status",
-							"value": "DYNAMIC"
-						},
-						{
-							"key": "x-render-origin-server",
-							"value": "gunicorn"
+							"key": "Date",
+							"value": "Sun, 03 Mar 2024 00:40:15 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "cloudflare"
-						},
-						{
-							"key": "Content-Encoding",
-							"value": "br"
-						},
-						{
-							"key": "alt-svc",
-							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+							"value": "Werkzeug/3.0.1 Python/3.8.16"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"message\": \"Mabel renamed to Omer\"\n}"
+					"body": "{\n    \"message\": \"Reinhold renamed to Mylene\"\n}"
 				}
 			]
 		},
@@ -1849,7 +1632,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"const token = pm.environment.get(\"access_token\");",
+							"const bad_id = pm.collectionVariables.get(\"bad_id\");",
+							"const username = pm.collectionVariables.get('username');",
 							"",
 							"",
 							"pm.test(\"Content-Type header is application/json\", () => {",
@@ -1858,13 +1642,10 @@
 							"",
 							"if(pm.response.headers.get('Content-Type') == 'application/json'){",
 							"",
-							"\tconst username = pm.collectionVariables.get('username');",
-							"",
-							"\tpm.test(`Should return 'Id 99 is invalid or does not belong to ${username}'`, function () {",
+							"\tpm.test(`Should return 'Id ${bad_id} is invalid or does not belong to ${username}`, function () {",
 							"\t\tvar {error} = pm.response.json();",
-							"\t\tpm.expect(error).to.eql(`Id 99 is invalid or does not belong to ${username}`);",
+							"\t\tpm.expect(error).to.eql(`Id ${bad_id} is invalid or does not belong to ${username}`);",
 							"\t});",
-							"",
 							"",
 							"\tpm.test(",
 							"\t\t\"Should respond with the correct status\", ",
@@ -1874,7 +1655,6 @@
 							"\t);",
 							"",
 							"}",
-							"",
 							""
 						],
 						"type": "text/javascript"
@@ -1916,13 +1696,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/mypokemon/99",
+					"raw": "{{host}}/mypokemon/{{bad_id}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
 						"mypokemon",
-						"99"
+						"{{bad_id}}"
 					]
 				},
 				"description": "Returns and appropriate error and status code when the UserPokemon.id given is invalid or does not belong to the authorized user."
@@ -1950,13 +1730,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/mypokemon/99",
+							"raw": "{{host}}/mypokemon/{{bad_id}}",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"mypokemon",
-								"99"
+								"{{bad_id}}"
 							]
 						}
 					},
@@ -1970,7 +1750,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "65"
+							"value": "75"
 						},
 						{
 							"key": "Content-Type",
@@ -1978,7 +1758,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Sat, 17 Feb 2024 03:58:48 GMT"
+							"value": "Sat, 02 Mar 2024 20:37:31 GMT"
 						},
 						{
 							"key": "Server",
@@ -1986,7 +1766,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"error\": \"Id 99 is invalid or does not belong to Bailee33\"\n}"
+					"body": "{\n    \"error\": \"Id 120197 is invalid or does not belong to Isaias_Corwin8\"\n}"
 				}
 			]
 		},
@@ -1997,10 +1777,8 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"const host = pm.environment.get(\"host\");\r",
-							"const token = pm.environment.get(\"access_token\");\r",
+							"const token = pm.collectionVariables.get(\"access_token\");\r",
 							"const username = pm.collectionVariables.get('username');\r",
-							"\r",
 							"const name = pm.collectionVariables.get('name');\r",
 							"\r",
 							"pm.test(\"Content-Type header is application/json\", () => {\r",
@@ -2190,11 +1968,9 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"const host = pm.environment.get(\"host\");\r",
-							"const token = pm.environment.get(\"access_token\");\r",
 							"const username = pm.collectionVariables.get('username');\r",
 							"\r",
-							"const name = pm.collectionVariables.get('name');\r",
+							"let bad_id = pm.collectionVariables.get(\"bad_id\");\r",
 							"\r",
 							"pm.test(\"Content-Type header is application/json\", () => {\r",
 							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
@@ -2203,11 +1979,9 @@
 							"if(pm.response.headers.get('Content-Type') == 'application/json'){\r",
 							"\r",
 							"\r",
-							"\tlet username = pm.collectionVariables.get('username');\r",
-							"\r",
-							"\tpm.test(`Should return 'Id 99 is invalid or does not belong to ${username}'`, function () {\r",
+							"\tpm.test(`Should return 'Id ${bad_id} is invalid or does not belong to ${username}'`, function () {\r",
 							"\t\tvar {error} = pm.response.json();\r",
-							"\t\tpm.expect(error).to.eql(`Id 99 is invalid or does not belong to ${username}`);\r",
+							"\t\tpm.expect(error).to.eql(`Id ${bad_id} is invalid or does not belong to ${username}`);\r",
 							"\t});\r",
 							"\r",
 							"\r",
@@ -2268,13 +2042,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/mypokemon/99",
+					"raw": "{{host}}/mypokemon/{{bad_id}}",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
 						"mypokemon",
-						"99"
+						"{{bad_id}}"
 					]
 				},
 				"description": "Returns an appropriate error and status code when the UserPokemon.id given in the url is invalid or does not belong to the user."
@@ -2302,13 +2076,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}/mypokemon/99",
+							"raw": "{{host}}/mypokemon/{{bad_id}}",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"mypokemon",
-								"99"
+								"{{bad_id}}"
 							]
 						}
 					},
@@ -2322,7 +2096,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "65"
+							"value": "75"
 						},
 						{
 							"key": "Content-Type",
@@ -2330,7 +2104,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Sat, 17 Feb 2024 03:59:01 GMT"
+							"value": "Sat, 02 Mar 2024 21:23:27 GMT"
 						},
 						{
 							"key": "Server",
@@ -2338,7 +2112,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"error\": \"Id 99 is invalid or does not belong to Bailee33\"\n}"
+					"body": "{\n    \"error\": \"Id 164043 is invalid or does not belong to Isaias_Corwin8\"\n}"
 				}
 			]
 		}
@@ -2392,6 +2166,18 @@
 		},
 		{
 			"key": "random_num",
+			"value": ""
+		},
+		{
+			"key": "bad_num",
+			"value": ""
+		},
+		{
+			"key": "bad_id",
+			"value": ""
+		},
+		{
+			"key": "access_token",
 			"value": ""
 		}
 	]
