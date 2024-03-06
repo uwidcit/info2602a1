@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "api-test": "npm run newman && npm run newman >> reports/api-report.txt",
-    "test": "newman run collection.json -e environment.json; return 0;"
+    "test": "newman run collection.json -e environment.json; return 0;",
+    "update-tests": "curl -L -o collection.json https://www.getpostman.com/collections/583570-b1c26430-4a62-4a99-ab10-4fb6f81c5622"
+
   },
   "repository": {
     "type": "git",
