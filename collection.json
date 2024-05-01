@@ -804,7 +804,8 @@
 						"exec": [
 							"pm.collectionVariables.set(\"random_num\", _.random(1, 100));"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -840,7 +841,8 @@
 							"",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -850,7 +852,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "{{access_token}}",
+							"value": "Bearer {{access_token}}",
 							"type": "string"
 						},
 						{
@@ -970,7 +972,8 @@
 						"exec": [
 							"pm.collectionVariables.set(\"bad_id\", _.random(10000, 19999));"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -1003,7 +1006,8 @@
 							"",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -1013,7 +1017,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "{{access_token}}",
+							"value": "Bearer {{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1143,7 +1147,18 @@
 							"    }",
 							");"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -1152,13 +1167,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Cookie",
+							"key": "value",
+							"value": "Bearer {{access_token}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "{{access_token}}",
+							"key": "key",
+							"value": "Cookie",
 							"type": "string"
 						}
 					]
@@ -1248,7 +1263,8 @@
 							"    }",
 							");"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -1257,7 +1273,8 @@
 						"exec": [
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -1267,7 +1284,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "{{access_token}}",
+							"value": "Bearer {{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1364,7 +1381,8 @@
 							");",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -1373,7 +1391,8 @@
 						"exec": [
 							"pm.collectionVariables.set(\"bad_id\", _.random(100000, 199999));"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -1383,7 +1402,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "{{access_token}}",
+							"value": "Bearer {{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1463,7 +1482,8 @@
 						"exec": [
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -1503,7 +1523,8 @@
 							"",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -1513,7 +1534,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "{{access_token}}",
+							"value": "Bearer {{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1625,7 +1646,8 @@
 						"exec": [
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -1657,7 +1679,8 @@
 							"}",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -1667,7 +1690,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "{{access_token}}",
+							"value": "Bearer {{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1811,7 +1834,8 @@
 							"\t});\r",
 							"}"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -1820,7 +1844,8 @@
 						"exec": [
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -1830,7 +1855,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "{{access_token}}",
+							"value": "Bearer {{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1994,7 +2019,8 @@
 							"\r",
 							"}"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -2003,7 +2029,8 @@
 						"exec": [
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -2013,7 +2040,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "{{access_token}}",
+							"value": "Bearer {{access_token}}",
 							"type": "string"
 						},
 						{
