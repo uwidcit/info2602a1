@@ -852,7 +852,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "Bearer {{access_token}}",
+							"value": "{{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1017,7 +1017,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "Bearer {{access_token}}",
+							"value": "{{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1168,7 +1168,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "Bearer {{access_token}}",
+							"value": "{{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1284,7 +1284,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "Bearer {{access_token}}",
+							"value": "{{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1402,7 +1402,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "Bearer {{access_token}}",
+							"value": "{{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1534,7 +1534,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "Bearer {{access_token}}",
+							"value": "{{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1690,7 +1690,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "Bearer {{access_token}}",
+							"value": "{{access_token}}",
 							"type": "string"
 						},
 						{
@@ -1855,7 +1855,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "Bearer {{access_token}}",
+							"value": "{{access_token}}",
 							"type": "string"
 						},
 						{
@@ -2040,7 +2040,7 @@
 					"apikey": [
 						{
 							"key": "value",
-							"value": "Bearer {{access_token}}",
+							"value": "{{access_token}}",
 							"type": "string"
 						},
 						{
