@@ -1,14 +1,15 @@
 {
-	"id": "af99e18d-e0b6-47aa-b586-2cec222c581a",
-	"name": "Localhost",
+	"id": "8fea6709-9bbf-487d-90a9-c1c54075b5fc",
+	"name": "localhost",
 	"values": [
 		{
 			"key": "host",
-			"value": "http://0.0.0.0:8080",
+			"value": "http://127.0.0.1:8080",
+			"type": "default",
 			"enabled": true
 		}
 	],
 	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2021-02-25T23:09:00.839Z",
-	"_postman_exported_using": "Postman/8.0.6"
+	"_postman_exported_at": "2025-02-14T03:19:46.308Z",
+	"_postman_exported_using": "Postman/11.32.4"
 }

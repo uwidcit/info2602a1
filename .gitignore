@@ -1,4 +1,4 @@
 node_modules
 __pycache__
-App/instance/*
+instance/
 .mypy_cache

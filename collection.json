@@ -5,7 +5,7 @@
 		"description": "The API testsuite for INFO 2602 Assignment 1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "583570",
-		"_collection_link": "https://www.postman.com/uwidcit/workspace/info-2602/collection/583570-b1c26430-4a62-4a99-ab10-4fb6f81c5622?action=share&source=collection_link&creator=583570"
+		"_collection_link": "https://uwidcit.postman.co/workspace/INFO-2602~711f31e1-bd1a-4e36-9e97-f6423c7741c9/collection/583570-b1c26430-4a62-4a99-ab10-4fb6f81c5622?action=share&source=collection_link&creator=583570"
 	},
 	"item": [
 		{
@@ -324,8 +324,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
+						"name": "Content-Type",
 						"type": "text"
 					}
 				],
@@ -357,8 +357,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
 								"value": "application/json",
+								"name": "Content-Type",
 								"type": "text"
 							}
 						],
@@ -455,8 +455,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
+						"name": "Content-Type",
 						"type": "text"
 					}
 				],
@@ -488,8 +488,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
 								"value": "application/json",
+								"name": "Content-Type",
 								"type": "text"
 							}
 						],
@@ -585,8 +585,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
+						"name": "Content-Type",
 						"type": "text"
 					}
 				],
@@ -618,8 +618,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
 								"value": "application/json",
+								"name": "Content-Type",
 								"type": "text"
 							}
 						],
@@ -708,8 +708,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
+						"name": "Content-Type",
 						"type": "text"
 					}
 				],
@@ -741,8 +741,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
 								"value": "application/json",
+								"name": "Content-Type",
 								"type": "text"
 							}
 						],
@@ -866,8 +866,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
+						"name": "Content-Type",
 						"type": "text"
 					},
 					{
@@ -904,8 +904,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
 								"value": "application/json",
+								"name": "Content-Type",
 								"type": "text"
 							},
 							{
@@ -1031,8 +1031,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
+						"name": "Content-Type",
 						"type": "text"
 					}
 				],
@@ -1064,8 +1064,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
 								"value": "application/json",
+								"name": "Content-Type",
 								"type": "text"
 							}
 						],
@@ -1548,8 +1548,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
+						"name": "Content-Type",
 						"type": "text"
 					}
 				],
@@ -1582,8 +1582,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
 								"value": "application/json",
+								"name": "Content-Type",
 								"type": "text"
 							}
 						],
@@ -1704,8 +1704,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
+						"name": "Content-Type",
 						"type": "text"
 					}
 				],
@@ -1738,8 +1738,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"name": "Content-Type",
 								"value": "application/json",
+								"name": "Content-Type",
 								"type": "text"
 							}
 						],
@@ -1869,9 +1869,9 @@
 				"header": [
 					{
 						"key": "Content-Type",
+						"value": "application/json",
 						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
+						"type": "text"
 					}
 				],
 				"body": {
@@ -1903,9 +1903,9 @@
 						"header": [
 							{
 								"key": "Content-Type",
+								"value": "application/json",
 								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"type": "text"
 							}
 						],
 						"body": {
@@ -2054,9 +2054,9 @@
 				"header": [
 					{
 						"key": "Content-Type",
+						"value": "application/json",
 						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
+						"type": "text"
 					}
 				],
 				"body": {
@@ -2088,9 +2088,9 @@
 						"header": [
 							{
 								"key": "Content-Type",
+								"value": "application/json",
 								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"type": "text"
 							}
 						],
 						"body": {
